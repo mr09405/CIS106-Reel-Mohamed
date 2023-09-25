@@ -1,1 +1,2 @@
 # CIS106-Reel-Mohamed
+My name is Reel Mohamed. I'm a freshman this year and I am taking this class so I can try new things and see where my skills lie. If I succeed in this class and enjoy programming, I hope to have a career in tech in the future. Programming is a cool skill to have while it is also very fundamental in itself. I hope to learn programming and have fun while I'm learning a new skill.
