@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-06 04:57:51 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswNDo0NjowNyBQTTszMjY4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswNDo1Nzo1MSBQTTsxOzMzNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="area" type="Integer" array="False" size=""/>
+            <declare name="perimeter" type="Integer" array="False" size=""/>
+            <declare name="radiusofcircle" type="Integer" array="False" size=""/>
+            <input variable="radiusofcircle"/>
+            <assign variable="area" expression="(radiusofcircle * radiusofcircle) * 3.174"/>
+            <assign variable="perimeter" expression="(2*3.174) * radiusofcircle"/>
+            <output expression="&quot;The area is &quot; &amp;area &amp;&quot; and the perimeter is &quot; &amp;perimeter" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

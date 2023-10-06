@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-06 03:34:52 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswMzozMDozMiBQTTszMjU4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswMzozNDo1MiBQTTsxOzMzNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jobpmnt" type="Integer" array="False" size=""/>
+            <declare name="indvpmnt" type="Integer" array="False" size=""/>
+            <input variable="jobpmnt"/>
+            <assign variable="indvpmnt" expression="jobpmnt/3"/>
+            <output expression="&quot;Each individual will recieve: $ &quot; &amp;indvpmnt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

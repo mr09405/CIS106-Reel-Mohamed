@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-06 04:39:36 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswMzozNTozOSBQTTszMjcw"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTc2MDM4QlQ7MjAyMy0xMC0wNjswNDozOTozNiBQTTsxOzMzODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="make" type="String" array="False" size=""/>
+            <declare name="model" type="String" array="False" size=""/>
+            <declare name="msrpamnt" type="Integer" array="False" size=""/>
+            <declare name="discprcnt" type="Real" array="False" size=""/>
+            <declare name="amntoffmsrp" type="Integer" array="False" size=""/>
+            <declare name="discprice" type="Integer" array="False" size=""/>
+            <input variable="make"/>
+            <input variable="model"/>
+            <input variable="msrpamnt"/>
+            <input variable="discprcnt"/>
+            <assign variable="amntoffmsrp" expression="msrpamnt * discprcnt"/>
+            <assign variable="discprice" expression="msrpamnt - amntoffmsrp"/>
+            <assign variable="discprcnt" expression="discprcnt"/>
+            <output expression="&quot;The make is &quot; &amp;make &amp; &quot; and the model is &quot; &amp;model &amp;&quot;. The msrp is $&quot; &amp;msrpamnt &amp;&quot; and the discount percent is &quot; &amp;discprcnt &amp;&quot; and the amount off msrp is $&quot; &amp;amntoffmsrp &amp;&quot;. The discounted price is $ &quot; &amp;discprice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
