@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-18 06:17:09 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTg4MlZCREU7MjAyMy0xMC0xODswNjowODo0NyBQTTszMzEy"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTg4MlZCREU7MjAyMy0xMC0xODswNjoxNzowOSBQTTsxOzM0MTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ppshare" type="Integer" array="False" size=""/>
+            <declare name="currentstockprice" type="Integer" array="False" size=""/>
+            <declare name="qtystock" type="Integer" array="False" size=""/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <input variable="ppshare"/>
+            <input variable="currentstockprice"/>
+            <input variable="qtystock"/>
+            <assign variable="value" expression="(currentstockprice - ppshare) * qtystock"/>
+            <output expression="value" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
