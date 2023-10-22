@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-22 01:13:46 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZLQUg3SUs7MjAyMy0xMC0yMjswMTowMjoxNCBQTTszMzI0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUZLQUg3SUs7MjAyMy0xMC0yMjswMToxMzo0NiBQTTsyOzM0NDA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="appname" type="String" array="False" size=""/>
+            <declare name="costapp" type="Real" array="False" size=""/>
+            <declare name="costwarr" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter appliance name: &quot;" newline="True"/>
+            <input variable="appname"/>
+            <output expression="&quot;Enter appliance cost: &quot;" newline="True"/>
+            <input variable="costapp"/>
+            <if expression="costapp &gt; 1000">
+                <then>
+                    <assign variable="costwarr" expression="0.10 * costapp"/>
+                </then>
+                <else>
+                    <assign variable="costwarr" expression="0.05 * costapp"/>
+                </else>
+            </if>
+            <assign variable="total" expression="costapp + costwarr"/>
+            <output expression="&quot;Appliance name: &quot; &amp;appname" newline="True"/>
+            <output expression="&quot;Cost of Appliance:     $&quot; &amp;costapp" newline="True"/>
+            <output expression="&quot;Total Cost:     $&quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
