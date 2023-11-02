@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-31 07:51:46 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswNjo0ODo1MyBQTTszMzUz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswNzo1MTo0NiBQTTsxOzM0NTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="principle" type="Real" array="False" size=""/>
+            <declare name="cdytm" type="Real" array="False" size=""/>
+            <declare name="intrate" type="Real" array="False" size=""/>
+            <declare name="fyi" type="Real" array="False" size=""/>
+            <input variable="principle"/>
+            <input variable="cdytm"/>
+            <if expression="principle &gt; 100000 and cdytm = 5">
+                <then>
+                    <assign variable="intrate" expression="0.06"/>
+                </then>
+                <else>
+                    <if expression="principle &gt;= 50000 and principle &lt; 100000 and cdytm = 10">
+                        <then>
+                            <assign variable="intrate" expression="0.05"/>
+                        </then>
+                        <else>
+                            <if expression="principle &gt;= 50000 and principle &lt; 100000 and cdytm = 5">
+                                <then>
+                                    <assign variable="intrate" expression="0.04"/>
+                                </then>
+                                <else>
+                                    <assign variable="intrate" expression="0.02"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="fyi" expression="principle * intrate"/>
+            <output expression="&quot;The principle is $&quot; &amp;principle" newline="True"/>
+            <output expression="&quot;The interest rate is  &quot; &amp;intrate &amp;&quot;%&quot;" newline="True"/>
+            <output expression="&quot;The interest amount for the first year is $ &quot; &amp;fyi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

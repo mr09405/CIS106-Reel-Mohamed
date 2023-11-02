@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-31 06:15:07 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswNjowNDoxNiBQTTszMzQ0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswNjoxNTowNyBQTTsxOzM0NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="extp" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="qty"/>
+            <if expression="qty &gt; 10000">
+                <then>
+                    <assign variable="price" expression="10.00"/>
+                </then>
+                <else>
+                    <if expression="qty &gt; 5000">
+                        <then>
+                            <assign variable="price" expression="20.00"/>
+                        </then>
+                        <else>
+                            <assign variable="price" expression="30.00"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="extp" expression="qty * price"/>
+            <assign variable="tax" expression="extp * 0.07"/>
+            <assign variable="total" expression="tax + extp"/>
+            <output expression="&quot;Extended Price $&quot; &amp;extp" newline="True"/>
+            <output expression="&quot;Tax is $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total is $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

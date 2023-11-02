@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-11-02 12:12:55 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTE4SVNVTzg7MjAyMy0xMS0wMjsxMjowNDowMSBBTTszMzA0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTE4SVNVTzg7MjAyMy0xMS0wMjsxMjoxMjo1NSBBTTsxOzM0MjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="salary" type="Real" array="False" size=""/>
+            <declare name="joblvl" type="Real" array="False" size=""/>
+            <declare name="bonusr" type="Real" array="False" size=""/>
+            <declare name="bonus" type="Real" array="False" size=""/>
+            <input variable="lname"/>
+            <input variable="salary"/>
+            <input variable="joblvl"/>
+            <if expression="joblvl &gt;= 10">
+                <then>
+                    <assign variable="bonusr" expression="0.25"/>
+                </then>
+                <else>
+                    <if expression="joblvl &gt;= 5 and joblvl &lt;= 9">
+                        <then>
+                            <assign variable="bonusr" expression="0.20"/>
+                        </then>
+                        <else>
+                            <assign variable="bonusr" expression="0.10"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="bonus" expression="salary * bonusr"/>
+            <output expression="&quot;Last name:    &quot; &amp;lname" newline="True"/>
+            <output expression="&quot;Bonus:    $&quot; &amp;bonus" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

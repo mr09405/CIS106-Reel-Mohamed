@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-31 08:07:16 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswNjo0ODo1MyBQTTszMzUz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVJBTUwyTUU7MjAyMy0xMC0zMTswODowNzoxNiBQTTsyOzM0NTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ticketno" type="Real" array="False" size=""/>
+            <declare name="pricept" type="Real" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="ticketno"/>
+            <if expression="ticketno &gt;= 25">
+                <then>
+                    <assign variable="pricept" expression="50.00"/>
+                </then>
+                <else>
+                    <if expression="ticketno &gt;= 10 and ticketno &lt; 24">
+                        <then>
+                            <assign variable="pricept" expression="60.00"/>
+                        </then>
+                        <else>
+                            <if expression="ticketno &gt;= 5 and ticketno &lt; 9">
+                                <then>
+                                    <assign variable="pricept" expression="70.00"/>
+                                </then>
+                                <else>
+                                    <assign variable="pricept" expression="75.00"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="total" expression="ticketno * pricept"/>
+            <output expression="&quot;The number of tickets is &quot; &amp;ticketno" newline="True"/>
+            <output expression="&quot;The price per ticket is  &quot; &amp;pricept &amp;&quot;$&quot;" newline="True"/>
+            <output expression="&quot;The total cost $ &quot; &amp;total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
